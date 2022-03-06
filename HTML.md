@@ -252,9 +252,9 @@ Igazítások:
 `font-weight` 
 
 További formázások:
-`text-decoration` 
-`text-decoration-line`
-`text-decoration-style`
-`text-decoration-color`
+-`text-decoration` 
+-`text-decoration-line`
+-`text-decoration-style`
+-`text-decoration-color`
 
-`text-shadow` Szövegárnyék. 
+-`text-shadow` Szövegárnyék. 
