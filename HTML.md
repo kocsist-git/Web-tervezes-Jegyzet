@@ -100,24 +100,26 @@ pl. hsl(156, 40%, 27%)
 
 CSS fájlban így írhatunk megjegyzést: /* ez egy megjegyzés */
 
-`<main> ... </main>` az oldal fő tartalmi szakasza. Csak egy lehet belőle. Nem lehet gyermekelem. Akadálymentesítési szempontból is fontos. 
+### Oldalszerkezet elemek 
 
-`<article> ... </article>` Ez egy önállóan is értelmes tartalmi egységet jelöl. A tartalmi egységek egymásba ágyazhatók. pl. tartalmi egysége lehet egy fórum. A fórumba írt bejegyzések is kerülhetnek `<article>` -tag-ek közé. 
+- `<main> ... </main>` az oldal fő tartalmi szakasza. Csak egy lehet belőle. Nem lehet gyermekelem. Akadálymentesítési szempontból is fontos. 
 
-`<section> ... </section>` Szakasz. Azonos témakörben tartozó több beágyazott tartalom közös címmel. Környezetének kontextusában nyer értelmet. Egymásba ágyazható. 
+- `<article> ... </article>` Ez egy önállóan is értelmes tartalmi egységet jelöl. A tartalmi egységek egymásba ágyazhatók. pl. tartalmi egysége lehet egy fórum. A fórumba írt bejegyzések is kerülhetnek `<article>` -tag-ek közé. 
 
-`<figure> ... </figure>` Erősen kapcsolódó tartalom megjelölésére szolgál. pozíciójának megváltoztatása az oldalon nem befolyásolja az oldal tartalmának érthetőségét. pl. ábrák, diagramok, képek, videók. stb.
+- `<section> ... </section>` Szakasz. Azonos témakörben tartozó több beágyazott tartalom közös címmel. Környezetének kontextusában nyer értelmet. Egymásba ágyazható. 
+
+- `<figure> ... </figure>` Erősen kapcsolódó tartalom megjelölésére szolgál. pozíciójának megváltoztatása az oldalon nem befolyásolja az oldal tartalmának érthetőségét. pl. ábrák, diagramok, képek, videók. stb.
 Ehhez tartozhat `<figcaption>` Ami a kapcsolódó tartalom címét jelenti meg. 
 
-`<aside> ... </aside>` Gyengén kapcsolódó tartalom. Érintőleges, nem a témáról szóló tartalom. pl. további információk, szavak magyarázata, idézetek, oldalsávban címfelhők, kapcsolódó reklám. 
+- `<aside> ... </aside>` Gyengén kapcsolódó tartalom. Érintőleges, nem a témáról szóló tartalom. pl. további információk, szavak magyarázata, idézetek, oldalsávban címfelhők, kapcsolódó reklám. 
 
-`<nav> ... </nav>` Navigációs elem. Menüsor, lapszámozás. Oldalon belüli navigálást megvalósító elemek helye. 
+- `<nav> ... </nav>` Navigációs elem. Menüsor, lapszámozás. Oldalon belüli navigálást megvalósító elemek helye. 
 
-`<header> ... </header>` Fejléc, bármilyen tartalmi egység elején a bevezető tartalom megadásra.
+- `<header> ... </header>` Fejléc, bármilyen tartalmi egység elején a bevezető tartalom megadásra.
 
-`<footer> ... <footer>` Lábléc, bármely tartalmi egység alján. pl. szerző, linkek, jogi következmények, elérhetőségek megadására. 
+- `<footer> ... <footer>` Lábléc, bármely tartalmi egység alján. pl. szerző, linkek, jogi következmények, elérhetőségek megadására. 
 
-`<h1...6>` Címsorok fontos része egy oldal tartalmának. SEO és akadálymentesítés szempontjából is komoly jelentőségé van. 
+- `<h1...6>` Címsorok fontos része egy oldal tartalmának. SEO és akadálymentesítés szempontjából is komoly jelentőségé van. 
 6 szintet különböztetünk meg. 
 A legfontosabb a `<h1>`
 NEM FORMÁZÁSRA HASZNÁLJUK!!!
@@ -129,73 +131,71 @@ Szövegek tagolása:
 A TAB, több szóköz a HTML forráskódban megjelenik, de a felhasználónál már nem. 
 A blokkszintű objektumok külön sorban jelennek meg. (css-el megváltoztatható) 
 A sor szintűek nem eredményeznek sortörést.
-`<p> ... </p>` bekezdés. Blokk szintű
-`<br>` sortörés. manuális. Ne használjuk térköz és bekezdés helyett. 
-`<wbr>` feltételes sortörés. Szavak elválasztását adjuk meg. 
-`<pre> ... <pre>` Előreformázott szöveg. tartalmilag olyan jellegű a szöveg, hogy figyelembe kell venni a tördelést. pl. ASCII-ábra, képversek, dalszövegek fölé írt akkordok. 
+- `<p> ... </p>` bekezdés. Blokk szintű
+- `<br>` sortörés. manuális. Ne használjuk térköz és bekezdés helyett. 
+- `<wbr>` feltételes sortörés. Szavak elválasztását adjuk meg. 
+- `<pre> ... <pre>` Előreformázott szöveg. tartalmilag olyan jellegű a szöveg, hogy figyelembe kell venni a tördelést. pl. ASCII-ábra, képversek, dalszövegek fölé írt akkordok. 
 
 Szemantikus tartalmak:
-`<cite>` A mű címe, vagy URL-je.
-`<blockquote> ... </blockquote>` idézetblokk, oldal szerkezet jellegű. Nagy terjedelmű idézetekhez. Tartalmazhat más oldalszerkezeti elemeket is. Lehet `<cite>` tulajdonsága. 
-`<q> ... </q>` Bekezdésen belüli idézetek. Nem tartalmazhat más oldalszerkezeti elemeket. Az idézőjelent nem kell kitenni a böngésző gondoskodik róla. 
-`<def> ... <def>` Azt a szót jelöli meg egy bekezdésben, amit azt adott bekezdésben definiáltunk. 
-`<abbr title = "..."> ... </abbr>` Rövidítés. Valaminek a rövidítését adjuk meg. 
-`<small> ... </small>` Megjegyzés. Csak rövid szövegre használható. Nem használható bekezdésre, vagy szakaszra.
-`<sub> ... </sub>` és `<sup> ... </sup>` Alsó és felső index. 
-`<code> ... </code>` Programkódot jelöl. 
-`<var> ... </var>` Programban, matematikai kifejezésben megjelenő változók. 
-`<time datetime= "..."> ... </time>` Datetime= a gép számára értelmezhető dátum. Tag-ek közé pedig a felhasználó számára értelmezhető dátum kerül. 
+- `<cite>` A mű címe, vagy URL-je.
+- `<blockquote> ... </blockquote>` idézetblokk, oldal szerkezet jellegű. Nagy terjedelmű idézetekhez. Tartalmazhat más oldalszerkezeti elemeket is. Lehet `<cite>` tulajdonsága. 
+- `<q> ... </q>` Bekezdésen belüli idézetek. Nem tartalmazhat más oldalszerkezeti elemeket. Az idézőjelent nem kell kitenni a böngésző gondoskodik róla. 
+- `<def> ... <def>` Azt a szót jelöli meg egy bekezdésben, amit azt adott bekezdésben definiáltunk. 
+- `<abbr title = "..."> ... </abbr>` Rövidítés. Valaminek a rövidítését adjuk meg. 
+- `<small> ... </small>` Megjegyzés. Csak rövid szövegre használható. Nem használható bekezdésre, vagy szakaszra.
+- `<sub> ... </sub>` és `<sup> ... </sup>` Alsó és felső index. 
+- `<code> ... </code>` Programkódot jelöl. 
+- `<var> ... </var>` Programban, matematikai kifejezésben megjelenő változók. 
+- `<time datetime= "..."> ... </time>` Datetime= a gép számára értelmezhető dátum. Tag-ek közé pedig a felhasználó számára értelmezhető dátum kerül. 
 
 Funkcionális elemek:
-`<s> ... </s>` Nem pontos idejétmúlt tartalom. 
-`<samp> ... </samp>` Program kimenete, üzenet. 
-`<kbd> ... </kbd>` Felhasználó által beírandó, vagy kimondandó tartalmon. pl. a betűméret nevelése érdekében a CTRL + Gombokat nyomja le. 
+- `<s> ... </s>` Nem pontos idejétmúlt tartalom. 
+- `<samp> ... </samp>` Program kimenete, üzenet. 
+- `<kbd> ... </kbd>` Felhasználó által beírandó, vagy kimondandó tartalmon. pl. a betűméret nevelése érdekében a CTRL + Gombokat nyomja le. 
 
 Kiemelések:
-`<em> ... </em>` Hangsúlyozás. A tartalom hangsúlyozása módosíthatja a szöveg értelmét. A felolvasó programok más hangsúllyal olvassák fel. 
-`<strong> ... </strong>` fontos tartalom esetén. A felolvasó programok más hangsúllyal olvassák fel. 
-`<b> ... </b>` Figyelem felhívás, de nem különösen fontos.  A felolvasó programok nem hangsúlyozva olvassák fel. 
-`<mark> ... </mark>` Vizuális kiemelés. A kiemelt szöveg magában is megálja a helyét. 
+- `<em> ... </em>` Hangsúlyozás. A tartalom hangsúlyozása módosíthatja a szöveg értelmét. A felolvasó programok más hangsúllyal olvassák fel. 
+- `<strong> ... </strong>` fontos tartalom esetén. A felolvasó programok más hangsúllyal olvassák fel. 
+- `<b> ... </b>` Figyelem felhívás, de nem különösen fontos.  A felolvasó programok nem hangsúlyozva olvassák fel. 
+- `<mark> ... </mark>` Vizuális kiemelés. A kiemelt szöveg magában is megálja a helyét. 
 
 Kiemelések tipikus használata: 
 Egy idézetben MI jelölünk ki egy szövegrészt, akkor használhatjuk a `<mark>`-ot. Ha a szerző emelte ki, akkor `<em>`, vagy `<strong>` használata javasolt. 
 
-További felhasználása a `<mark>` jelölőnek: 
+- További felhasználása a `<mark>` jelölőnek: 
 Keresési eredmények megjelölése, rendszeresen frissített listában az új elemek jelölésére, a naptában az aktuális nap megjelölésére. 
 
-`<u> ... </u>` Helytelenül írt szöveg megjelölésére. Csak nagyon indokolt esetbe használjuk. 
-`<i> ... </i>` Szövegrész elkülönítésére, szakkifejezés, cím, más nyelvű, más hangulatú szöveg elkülönítésére használjuk.
+- `<u> ... </u>` Helytelenül írt szöveg megjelölésére. Csak nagyon indokolt esetbe használjuk. 
+- `<i> ... </i>` Szövegrész elkülönítésére, szakkifejezés, cím, más nyelvű, más hangulatú szöveg elkülönítésére használjuk.
 
 Szerkesztések: 
-`<del> ... </del>` Törölt szöveg. Megjelenő szöveg, de jelezzük, hogy érvénytelen. Megadható `<cite>` miért töröltük és `<datetime>` törlés időpontja.
-`<ins> ... </ins>` Utólagosan beszúrt tartalom. Itt is megadható a miért és mikor. 
+- `<del> ... </del>` Törölt szöveg. Megjelenő szöveg, de jelezzük, hogy érvénytelen. Megadható `<cite>` miért töröltük és `<datetime>` törlés időpontja.
+- `<ins> ... </ins>` Utólagosan beszúrt tartalom. Itt is megadható a miért és mikor. 
 
 Hivatkozások: 
-`<a herf = " ... "> ... </a>` Tag-ek között adjuk meg a felhasználónak megjelenő szöveget. A `herf` után pedig a címet. 
+- `<a herf = " ... "> ... </a>` Tag-ek között adjuk meg a felhasználónak megjelenő szöveget. A `herf` után pedig a címet. 
 Megadható tulajdonságok:
-download: a cél egy letöltendő fájl értéke a fájl alapértelmezett neve. 
-hreflang: a céloldal nyelve.
-type: a cél MIME típusa. 
+- `download`: a cél egy letöltendő fájl értéke a fájl alapértelmezett neve. 
+- `hreflang`: a céloldal nyelve.
+- `type`: a cél MIME típusa. 
 
-rel értékei: 
-alternate: azonos tartalom alternatív (más nyelvű vagy típusú) formában.
-author: a szerző bemutatása. 
-external: a webhelyen kívüli (külső) oldal
-help: az aktuális csúcspont szülőjére és annak gyerekeire vonatkozó segítség
+rel értékei:
+- `alternate`: azonos tartalom alternatív (más nyelvű vagy típusú) formában.
+- `author`: a szerző bemutatása. 
+- `external`: a webhelyen kívüli (külső) oldal
+- `help`: az aktuális csúcspont szülőjére és annak gyerekeire vonatkozó segítség
 
 target értékei:
-hol jelenjen meg a hivatkozott URL?
-keret = iframe, ablak, lap = böngészési környezet
-nev: a név nevű keretben
-_parent: a szülőkeretben ➢ szülő hiányában: _self
-_top: a legfelsőbb szintű (legősibb) szülőkeretben ➢ szülő hiányában: _self
-_self: ugyanabban a keretben (alapértelmezett)
-_blank: új keretben
+Hol jelenjen meg a hivatkozott URL?
+- `_parent:` a szülőkeretben ➢ szülő hiányában: _self
+- `_top:` a legfelsőbb szintű (legősibb) szülőkeretben ➢ szülő hiányában: _self
+- `_self:` ugyanabban a keretben (alapértelmezett)
+- `_blank:` új keretben
 
 Csak indokolt esetekben térjünk el az alapértelmezéstől!
 
 Alapértelmezett célmappa és böngészési környezet megadása:
-`<base href = " ..." />` Megadható az alapértelmezett relatív útvonal. 
+- `<base href = " ..." />` Megadható az alapértelmezett relatív útvonal. 
 Érdemes mindig relatív linket használni. 
 
 A hivatkozásoknak 4 fő állapota van. 
@@ -206,25 +206,25 @@ A hivatkozásoknak 4 fő állapota van.
 
 Ezeknek a formázását CSS alosztály kijelölővel végezzük.
 
-`a:link` a felhasználó még nem kereste fel. 
-`a:visited` a felhasználó már felkereste.
-`a:hover` az egér fölötte van.
-`a:active` éppen töltődik az oldal. 
+- `a:link` a felhasználó még nem kereste fel. 
+- `a:visited` a felhasználó már felkereste.
+- `a:hover` az egér fölötte van.
+- `a:active` éppen töltődik az oldal. 
 
 A felkeresett oldalt a böngészési előzményekből kéri le a böngésző.
 
 Szövegek tulajdonságai:
-`lang = " ... "` Bármilyen tag esetén megadható. "HU" - magyar. "EN" - angol. 
+- `lang = " ... "` Bármilyen tag esetén megadható. "HU" - magyar. "EN" - angol. 
 Akadálymentesítés szempontjából fontos. SEO szempontból is hasznos. 
 
 Speciális karakterek:
-Numerikusan: 
-`&#nnnn;` decimális
-`&#xhhhh;` hexadecimális
+Numerikusan:
+- `&#nnnn;` decimális
+- `&#xhhhh;` hexadecimális
 
 Karakterentitás: 
-& `&amp;` , vagy `&#38;`
-" `&quot;`, vagy `&#34;`
+- & `&amp;` , vagy `&#38;`
+- " `&quot;`, vagy `&#34;`
 stb.
 
 
@@ -232,24 +232,24 @@ Egy kevés CSS:
 
 Sövegek formázása:
 Távolságok, tördelések:
-Betűköz: `letter-spacing`
-Szóköz: `word-spacing`
-Sormagasság: `line-height`
-Tördelésék és white space tulajdonságok: `white-space`
+- Betűköz: `letter-spacing`
+- Szóköz: `word-spacing`
+- Sormagasság: `line-height`
+- Tördelésék és white space tulajdonságok: `white-space`
 
 Igazítások:
-`text-aling` vízszintes, blokk szintű elemekre. 
-`vertical-aling` függőleges, ez inline elemekre, vagy táblázat cellákra, nem öröklődik
-`text-indent` bekezdések behúzása.
+- `text-aling` vízszintes, blokk szintű elemekre. 
+- `vertical-aling` függőleges, ez inline elemekre, vagy táblázat cellákra, nem öröklődik
+- `text-indent` bekezdések behúzása.
 
 Átalakítások:
-`text-transform` 
-`font-variant`
-`font-family` vesszővel elválasztva megadható több család is. A böngésző az első telepítettet fogja használni. 
+- `text-transform` 
+- `font-variant`
+- `font-family` vesszővel elválasztva megadható több család is. A böngésző az első telepítettet fogja használni. 
 
-`font-size` Betűméret. 
-`font-style` 
-`font-weight` 
+- `font-size` Betűméret. 
+- `font-style` 
+- `font-weight` 
 
 További formázások:
 - `text-decoration` 
