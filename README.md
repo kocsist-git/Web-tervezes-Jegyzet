@@ -1,6 +1,6 @@
 # HTML5-Jegyzet
 
-#### A kezdet: 
+### A kezdet: 
 A kezdetek, egy szabványos HTML5 oldal nyomában: 
 A html dokumentumunk legelső sora a dokumentum típusának meghatározása. 
 Ezt a <!DOCTYPE html> információs szöveg elhelyezésével tehetjük meg. Ezzel tudatjuk a böngészővel milyen dokumentumra felolvasására számítson. Nem tekintjük html tag -nek. (DTD)
@@ -33,7 +33,7 @@ Következzen egy egyszerű szabványos html5 oldal.
 </html>
 ```
 Ez egy szabványos html5 oldal. Ezt ellenőrizhetitek a https://validator.w3.org/ oldalon. 
-Két számunkra ismeretlen objektumot látunk benne. `<title> … </title> valamint a <body> … </body>`
+Két számunkra ismeretlen objektumot látunk benne. `<title> … </title>` valamint a `<body> … </body>`
 A `<body>` a dokumentum törzse. Az itt megfogalmazott objektum kapcsolatok kerülnek megjelenítésre a böngésző által. 
 A `<title>` adja meg a dokumentum címét. 
 
@@ -57,7 +57,7 @@ hint: a csoportnevek ne a hatásra, hanem a funkcióra utaljanak.
 
 Jó-jó, ha ne formázásra használjuk a különböző html tag-eket, akkor mit használjuk formázásra?   
 
-#### A CSS: 
+### A CSS: 
 
 Több helyen is adhatunk meg CSS utasítást. A <head> tegben elhelyezve. A <body> -ban elhelyezve. Az objektumba ágyazva, úgynevezett inline CSS-ként, vagy külső fájlban. 
 
@@ -88,9 +88,9 @@ A nem alapértelmezett öröklés kérhető az: inherit értékkel.
 
 Színek megadása:
 - Névvel:
-előre defibiált színnevek. pl. Red
+előre definiált színnevek. pl. Red
 - Hexadecimális RGB:
-additív színkeverés vörös, kék, zöld. pl. #FF6347
+addiktív színkeverés vörös, kék, zöld. pl. #FF6347
 - Decimális RGB:
 0-255 közöti számokkal, vagy 0% - 100% ig. pl. rgb(255, 99, 71)
 - Százalékos RGB:
